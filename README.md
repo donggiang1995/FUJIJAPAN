@@ -1,5 +1,19 @@
 # Welcome to your Lovable project
 
+## ⚠️ Cấu hình Supabase mới
+
+Dự án này đã được cấu hình để sử dụng cơ sở dữ liệu Supabase mới. Để hoàn tất thiết lập:
+
+1. **Tạo project Supabase mới** tại [supabase.com](https://supabase.com)
+2. **Cập nhật thông tin kết nối** trong file `src/integrations/supabase/client.ts`:
+   - Thay thế `YOUR_NEW_SUPABASE_URL` bằng URL project mới
+   - Thay thế `YOUR_NEW_SUPABASE_ANON_KEY` bằng anon key mới
+3. **Chạy migrations** để tạo cấu trúc database:
+   - Sao chép nội dung từ `supabase/migrations/` vào SQL Editor trong Supabase Dashboard
+   - Chạy từng file migration theo thứ tự
+4. **Tạo admin user** đầu tiên thông qua Supabase Auth
+5. **Cập nhật role admin** trong bảng profiles
+
 ## Project info
 
 **URL**: https://lovable.dev/projects/92060551-f71b-423b-8656-0ef67df9d36e
