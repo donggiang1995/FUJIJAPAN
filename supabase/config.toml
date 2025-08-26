@@ -1,0 +1,4 @@
+project_id = "aiedvxrxzsmtupsdoyui"
+
+[functions.search-serial]
+verify_jwt = false
