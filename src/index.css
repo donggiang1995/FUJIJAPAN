@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* THAI FUJI ELEVATOR Professional Design System */
+
+@layer base {
+  :root {
+    /* Base Colors - Light & Professional */
+    --background: 0 0% 100%;
+    --foreground: 220 25% 15%;
+
+    /* Thai Professional Color Palette */
+    --thai-navy: 252 92% 22%;      /* Deep purple navy #22056b */
+    --thai-ocean: 252 92% 22%;     /* Primary color #22056b */
+    --thai-orange: 44 84% 51%;     /* Gold accent #e5ab1f */
+    --steel-gray: 215 15% 50%;     /* Steel gray */
+    --steel-light: 215 15% 70%;    /* Light steel */
+    --steel-dark: 252 92% 22%;     /* Dark steel using primary */
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+
+    /* Primary - Deep Purple Navy */
+    --primary: 252 92% 22%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light Gray */
+    --secondary: 215 15% 92%;
+    --secondary-foreground: 252 92% 22%;
+
+    /* Muted */
+    --muted: 215 15% 95%;
+    --muted-foreground: 215 15% 50%;
+
+    /* Accent - Gold */
+    --accent: 44 84% 51%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders */
+    --border: 215 15% 85%;
+    --input: 215 15% 85%;
+    --ring: 252 92% 22%;
+
+    /* Glass Morphism */
+    --glass-bg: 0 0% 100% / 0.1;
+    --glass-border: 0 0% 100% / 0.2;
+    --glass-shadow: 0 0% 0% / 0.1;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(252 92% 22%), hsl(252 92% 30%));
+    --gradient-secondary: linear-gradient(135deg, hsl(215 15% 92%), hsl(215 15% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(252 92% 22%), hsl(252 92% 30%), hsl(44 84% 51%));
+
+    /* Professional Shadows */
+    --shadow-sm: 0 2px 4px hsl(215 25% 25% / 0.1);
+    --shadow-md: 0 4px 12px hsl(215 25% 25% / 0.15);
+    --shadow-lg: 0 8px 32px hsl(215 25% 25% / 0.2);
+    --shadow-glow: 0 0 20px hsl(207 100% 50% / 0.3);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-montserrat;
+    line-height: 1.7; /* Better for Thai text */
+  }
+}
+
+@layer components {
+  /* Glass Morphism Component */
+  .glass-morphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Industrial Card */
+  .industrial-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .industrial-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  /* Metric Display */
+  .metric-display {
+    background: var(--gradient-secondary);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Hero Gradient */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Primary Gradient */
+  .primary-gradient {
+    background: var(--gradient-primary);
+  }
+
+  /* Glow Effect */
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Industrial Button */
+  .btn-industrial {
+    background: var(--gradient-primary);
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-industrial:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-1px);
+  }
+
+  /* Text Gradients */
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
